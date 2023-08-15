@@ -25,11 +25,13 @@ public class ChatGPTStrreamUtil {
     private String proxyIp;
     @Value("${proxy.port}")
     private Integer proxyPort;
+    @Value("${proxy.canuse}")
+    private Boolean canuse;
 
     @PostConstruct
     public void init(){
         //如果在国内访问，使用这个
-        if(!StringUtils.isEmpty(proxyIp)){
+        if(canuse){
             Proxy proxy = Proxys.http(proxyIp, proxyPort);
             chatGPTStream = ChatGPTStream.builder()
                     .apiKey(token)
