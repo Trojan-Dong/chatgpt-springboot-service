@@ -10,11 +10,11 @@ import com.dingtalk.api.request.OapiRobotSendRequest;
 import com.dingtalk.api.response.OapiRobotSendResponse;
 import com.taobao.api.ApiException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.stream.Collectors;
-
-@RequestMapping("/ding-talk")
+@RequestMapping("/ding")
 @RestController
 public class DingTalkController {
 
@@ -28,12 +28,18 @@ public class DingTalkController {
     String sessionWebhook = json.getStr("sessionWebhook");
     DingTalkClient client = new DefaultDingTalkClient(sessionWebhook);
     if ("text".equals(json.getStr("msgtype"))) {
-      text(client,content);
+      text(client, content);
     }
     return null;
   }
-
-  private void text(DingTalkClient client,String content) {
+  
+  @RequestMapping("/chat")
+  public String chat(@RequestBody Message message) {
+    Message retMsg = chatGPTUtil.chat(message.getContent(), "dingtalk");
+    return retMsg.getContent();
+  }
+  
+  private void text(DingTalkClient client, String content) {
     try {
       OapiRobotSendRequest request = new OapiRobotSendRequest();
       request.setMsgtype("text");
