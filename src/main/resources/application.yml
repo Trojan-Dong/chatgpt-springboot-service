@@ -4,8 +4,24 @@ logging:
   level:
     root: info
 openai:
-  secret_key: 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
+  secret_key:
 proxy: #如果在国内访问，使用这个
   canuse: true
   ip: 127.0.0.1
   port: 1081
+springdoc:
+  swagger-ui:
+    path: swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v2/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.trojan.chat.controller
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  setting:
+    language: zh-CN

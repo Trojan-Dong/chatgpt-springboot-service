@@ -18,12 +18,15 @@
         <retrofit2.version>2.9.0</retrofit2.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <knife4j.version>2.0.9</knife4j.version>
+        <swagger.version>3.0.0</swagger.version>
+        <lombok.version>1.18.28</lombok.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.26</version>
+            <version>${lombok.version}</version>
             <scope>compile</scope>
             <optional>true</optional>
         </dependency>
@@ -93,13 +96,25 @@
             <artifactId>hutool-all</artifactId>
             <version>5.8.12</version>
         </dependency>
-<!--        junit测试会用到，创建了一个client，连接springboot websocket服务-->
+        <!--        junit测试会用到，创建了一个client，连接springboot websocket服务-->
         <dependency>
             <groupId>org.java-websocket</groupId>
             <artifactId>Java-WebSocket</artifactId>
             <version>1.5.1</version>
             <scope>test</scope>
         </dependency>
+        <!--    swagger-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+            <version>${knife4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
