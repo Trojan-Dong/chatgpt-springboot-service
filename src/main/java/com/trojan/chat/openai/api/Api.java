@@ -1,8 +1,8 @@
 package com.trojan.chat.openai.api;
 
-import com.trojan.chat.openai.entity.billing.CreditGrantsResponse;
-import com.trojan.chat.openai.entity.chat.ChatCompletion;
-import com.trojan.chat.openai.entity.chat.ChatCompletionResponse;
+import com.trojan.chat.repository.entity.billing.CreditGrantsResponse;
+import com.trojan.chat.repository.entity.chat.ChatCompletion;
+import com.trojan.chat.repository.entity.chat.ChatCompletionResponse;
 import io.reactivex.Single;
 import retrofit2.http.Body;
 import retrofit2.http.GET;

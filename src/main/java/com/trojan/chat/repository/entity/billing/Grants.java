@@ -1,4 +1,4 @@
-package com.trojan.chat.openai.entity.billing;
+package com.trojan.chat.repository.entity.billing;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

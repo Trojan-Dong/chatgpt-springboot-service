@@ -2,9 +2,9 @@ package com.trojan.chat.openai.listener;
 
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSON;
-import com.trojan.chat.openai.entity.chat.ChatChoice;
-import com.trojan.chat.openai.entity.chat.ChatCompletionResponse;
-import com.trojan.chat.openai.entity.chat.Message;
+import com.trojan.chat.repository.entity.chat.ChatChoice;
+import com.trojan.chat.repository.entity.chat.ChatCompletionResponse;
+import com.trojan.chat.repository.entity.chat.Message;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;

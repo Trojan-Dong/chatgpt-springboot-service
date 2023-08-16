@@ -1,8 +1,8 @@
 package com.trojan.chat.openai;
 
-import com.trojan.chat.openai.entity.chat.ChatCompletion;
-import com.trojan.chat.openai.entity.chat.ChatCompletionResponse;
-import com.trojan.chat.openai.entity.chat.Message;
+import com.trojan.chat.repository.entity.chat.ChatCompletion;
+import com.trojan.chat.repository.entity.chat.ChatCompletionResponse;
+import com.trojan.chat.repository.entity.chat.Message;
 import com.trojan.chat.util.Proxys;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

@@ -2,7 +2,7 @@ package com.trojan.chat.websocket;
 
 import cn.hutool.core.lang.UUID;
 import com.trojan.chat.openai.ChatGPTUtil;
-import com.trojan.chat.openai.entity.chat.Message;
+import com.trojan.chat.repository.entity.chat.Message;
 import com.trojan.chat.websocket.bean.WebSocketBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

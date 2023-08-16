@@ -1,7 +1,7 @@
 package com.trojan.chat.util;
 
 
-import com.trojan.chat.openai.entity.chat.Message;
+import com.trojan.chat.repository.entity.chat.Message;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,6 +1,6 @@
-package com.trojan.chat.openai.entity.chat;
+package com.trojan.chat.repository.entity.chat;
 
-import com.trojan.chat.openai.entity.billing.Usage;
+import com.trojan.chat.repository.entity.billing.Usage;
 import lombok.Data;
 
 import java.util.List;

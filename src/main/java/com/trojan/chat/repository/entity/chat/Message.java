@@ -1,4 +1,4 @@
-package com.trojan.chat.openai.entity.chat;
+package com.trojan.chat.repository.entity.chat;
 
 import lombok.*;
 
